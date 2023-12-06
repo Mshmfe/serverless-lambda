@@ -1,3 +1,4 @@
+
 {
   "version": 2,
   "builds": [
@@ -12,9 +13,5 @@
       "dest": "/index.js"
     }
   ],
-  "functions": {
-    "myFunction": {
-      "timeout": 30
-    }
-  }
+  "serverless": "serverless.yml"
 }
