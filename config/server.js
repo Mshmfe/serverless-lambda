@@ -5,7 +5,7 @@ const dev = {
     port:process.env.port|| 8080,
   },
   db: {
-    url: process.env.MOGO_URL || "mongodb+srv://Mashael-aljaafari:<password>@cluster0.2kg4kex.mongodb.net/testDB",
+    url: process.env.MOGO_URL || "",
   },
 };
 module.exports = dev;
