@@ -25,7 +25,7 @@ app.listen(port, () => {
 app.get("/", (req, res) => {
   res.send("Welcome to my server😊❤️");
 });
-module.exports = (req, res) => {
+const time = (req, res) => {
   const timeoutDuration = 30000; // 30 seconds
 
   const timeout = setTimeout(() => {
