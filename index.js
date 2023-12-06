@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const productRoute = require("./routes/productRoute");
 const dev = require("./config/server");
 require("dotenv").config();
+const maxDuration = 5;
 
 const app = express();
 const mogoURL = dev.db.url;
@@ -29,4 +30,4 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/products", productRoute);
 
-module.exports = app;
+module.exports = {app,maxDuration};
