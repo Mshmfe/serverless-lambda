@@ -25,16 +25,6 @@ app.listen(port, () => {
 app.get("/", (req, res) => {
   res.send("Welcome to my server😊❤️");
 });
-const time = (req, res) => {
-  const timeoutDuration = 30000; // 30 seconds
-
-  const timeout = setTimeout(() => {
-    res.status(500).json({ error: "Function timed out" });
-  }, timeoutDuration);
-
-  clearTimeout(timeout);
-  res.status(200).json({ message: "Function executed successfully" });
-};
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/products", productRoute);
