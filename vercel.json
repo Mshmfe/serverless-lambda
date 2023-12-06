@@ -10,14 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.js",
-      "maxDuration": 15
+      "dest": "/index.js"
     }
-  ],
- 
-    "functions": {
-      "app/api/**/*": {
-        "maxDuration": 5 
-      }
-    }
+  ]
 }
