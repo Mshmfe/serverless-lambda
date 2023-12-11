@@ -14,11 +14,11 @@ const port = dev.app.port;
 
 
 
-
+connectDB();
 
 app.listen(port, () => {
   console.log(`server is running on http://localhost:${port}`);
-  connectDB();
+  
 
 });
 
