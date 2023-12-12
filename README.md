@@ -2,7 +2,7 @@
 
  step 1: we need serveless package 
  
-step 2 : we need to connect the app to aws lambda by this( serverless config credentials --provider aws –key) ->(and we need accesses key an security key)
+step 2 : we need to connect the app to aws lambda by this( serverless config credentials --provider aws –key<your key> --) ->(and we need accesses key an security key)
 
 step 3 : -create templet for the language you want (serverless create -t aws-nodejs)
 
