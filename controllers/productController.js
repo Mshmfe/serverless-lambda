@@ -3,7 +3,9 @@ const Products = require("../models/productModels");
 const getAllProducts = async (req, res) => {
   try {
     const product = await Products.find();
-    res.send({ products: product });
+    res.send({
+      products: product,
+    });
   } catch (error) {
     return res.status(500).send({ message: error.message });
   }

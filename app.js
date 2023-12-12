@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 
-const dev = require("./config/server");
 const productRoute = require("./routes/productRoute");
 const connectDB = require("./config/db");
 require("dotenv").config();
@@ -23,8 +22,7 @@ connectDB();
 app.get("/", (req, res) => {
   res.send("Welcome to my server😊❤️");
 });
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+
 app.use(cors());
 app.use("/products", productRoute);
 
