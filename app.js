@@ -1,9 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 
-const dev = require("../config/server");
-const productRoute = require("../routes/productRoute");
-const connectDB = require("../config/db");
+const dev = require("./config/server");
+const productRoute = require("./routes/productRoute");
+const connectDB = require("./config/db");
 require("dotenv").config();
 
 
@@ -11,17 +11,13 @@ require("dotenv").config();
 
 
 const app = express();
-const port = dev.app.port;
+
 
 
 
 connectDB();
 
-app.listen(port, () => {
-  console.log(`server is running on http://localhost:${port}`);
-  
 
-});
 
 
 app.get("/", (req, res) => {
@@ -33,3 +29,5 @@ app.use(cors());
 app.use("/products", productRoute);
 
 module.exports = app;
+// make sure you are not trying to listen the server
+// we need to install the package for serverless
